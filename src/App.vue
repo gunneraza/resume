@@ -6,6 +6,7 @@
     </div>
     <main-form/>
     <skills/>
+    <js-lvl/>
   </div>
 </template>
 
@@ -13,10 +14,11 @@
   import { defineComponent } from 'vue'
   import MainForm from './components/MainForm.vue'
   import Skills from './components/Skills.vue'
+  import JsLvl from "./components/JsLvl.vue";
 
   export default defineComponent({
     name: 'App',
-    components: { MainForm, Skills },
+    components: { MainForm, Skills, JsLvl },
   })
 </script>
 
