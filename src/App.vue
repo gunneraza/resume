@@ -5,16 +5,18 @@
       <div class="header__img" style="background-image: url('./secret.png')"></div>
     </div>
     <main-form/>
+    <skills/>
   </div>
 </template>
 
 <script>
   import { defineComponent } from 'vue'
   import MainForm from './components/MainForm.vue'
+  import Skills from './components/Skills.vue'
 
   export default defineComponent({
     name: 'App',
-    components: { MainForm },
+    components: { MainForm, Skills },
   })
 </script>
 
@@ -63,5 +65,27 @@
   .title-2 {
     font-size: 30px;
     font-weight: 700;
+  }
+
+  .title-1 {
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  .section {
+    padding: 100px 0;
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      color: #3d3d3d;
+    }
+
+    &__body {
+      margin-top: 80px;
+    }
   }
 </style>
