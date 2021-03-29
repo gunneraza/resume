@@ -9,6 +9,12 @@
     <js-lvl/>
     <about/>
     <future/>
+    <div class="date">
+      <div class="date__title">Дата заполнения</div>
+      <div class="input">
+        <input type="text" :value="date">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -23,6 +29,13 @@
   export default defineComponent({
     name: 'App',
     components: { MainForm, Skills, JsLvl, About, Future },
+    setup() {
+      let date = '30.03.2021'
+
+      return {
+        date
+      }
+    }
   })
 </script>
 
@@ -65,6 +78,20 @@
       position: absolute;
       top: 160px;
       right: 0;
+    }
+  }
+
+  .date {
+    display: flex;
+    align-items: flex-end;
+    width: 500px;
+    padding-bottom: 100px;
+
+    &__title {
+      font-size: 24px;
+      font-weight: 700;
+      white-space: nowrap;
+      margin-right: 20px;
     }
   }
 
