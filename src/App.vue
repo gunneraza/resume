@@ -30,7 +30,7 @@
     name: 'App',
     components: { MainForm, Skills, JsLvl, About, Future },
     setup() {
-      let date = '30.03.2021'
+      let date = '29.03.2021'
 
       return {
         date

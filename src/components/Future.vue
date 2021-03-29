@@ -6,29 +6,16 @@
     </div>
     <div class="section__body">
       <div class="future-radio">
-        <div class="future-radio__item active">
+        <div class="future-radio__item"
+             v-for="(item, index) in featureList"
+             :key="index"
+             :class="{ active: index === selectedIndex }"
+             @click="selectedIndex = index"
+        >
           <div class="future-radio__circle">
             <div class="future-radio__dot"></div>
           </div>
-          <div class="future-radio__title">Верстать</div>
-        </div>
-        <div class="future-radio__item">
-          <div class="future-radio__circle">
-            <div class="future-radio__dot"></div>
-          </div>
-          <div class="future-radio__title">Прокачиваться в JS</div>
-        </div>
-        <div class="future-radio__item">
-          <div class="future-radio__circle">
-            <div class="future-radio__dot"></div>
-          </div>
-          <div class="future-radio__title">Менеджерство</div>
-        </div>
-        <div class="future-radio__item">
-          <div class="future-radio__circle">
-            <div class="future-radio__dot"></div>
-          </div>
-          <div class="future-radio__title">Другое</div>
+          <div class="future-radio__title">{{ item }}</div>
         </div>
       </div>
     </div>
@@ -36,10 +23,23 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
-  name: 'Future'
+  name: 'Future',
+  setup() {
+    let featureList = ref([
+        'Верстать',
+        'Прокачиваться в JS',
+        'Менеджерство',
+        'Другое'
+    ])
+    let selectedIndex = ref(1)
+
+    return {
+      featureList, selectedIndex
+    }
+  }
 })
 </script>
 

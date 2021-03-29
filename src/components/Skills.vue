@@ -7,7 +7,7 @@
     <div class="section__body">
       <div class="skills">
         <div class="skill" v-for="skill in skills" :key="skill.label" :class="{ active: skill.checked}">
-          <div class="skill__body">
+          <div class="skill__body" @click="skill.checked = !skill.checked">
             <div class="skill__box">
               <div class="skill__check"></div>
             </div>
@@ -20,12 +20,12 @@
 </template>
 
 <script>
-  import { defineComponent } from 'vue'
+  import { defineComponent, ref } from 'vue'
 
   export default defineComponent({
     name: 'Skills',
     setup() {
-      let skills = [
+      let skills = ref([
         {
           label: 'БЭМ/OOCSS',
           checked: true,
@@ -110,7 +110,7 @@
           label: 'Я ленивый(-ая)',
           checked: false
         }
-      ]
+      ])
       return {
         skills
       }
