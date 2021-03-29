@@ -124,6 +124,15 @@
     flex-flow: row wrap;
     margin-left: -10px;
     margin-right: -15%;
+
+    @media (max-width: 1200px) {
+      margin-right: -10%;
+    }
+
+    @media (max-width: 768px) {
+      flex-flow: column nowrap;
+      margin-right: 0;
+    }
   }
 
   .skill {
@@ -165,6 +174,10 @@
     &__title {
       font-size: 26px;
       font-weight: 700;
+
+      @media (max-width: 1024px) {
+        font-size: 20px;
+      }
     }
   }
 

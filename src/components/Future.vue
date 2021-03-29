@@ -47,11 +47,19 @@ export default defineComponent({
     .future-radio {
       display: flex;
 
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+
       &__item {
         display: flex;
         align-items: center;
         cursor: pointer;
         margin-right: 30px;
+
+        @media (max-width: 768px) {
+          margin-bottom: 20px;
+        }
       }
 
       &__item.active {
@@ -86,6 +94,10 @@ export default defineComponent({
       &__title {
         font-size: 24px;
         font-weight: 700;
+
+        @media (max-width: 1024px) {
+          font-size: 20px;
+        }
       }
     }
 </style>

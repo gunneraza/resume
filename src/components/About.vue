@@ -10,7 +10,7 @@
     <div class="section__body">
       <div class="about">
         <div class="about__field">
-          <textarea class="textarea" rows="2" @keypress="resize">Хотелось бы присоединиться к вашей команде, научится чему то большему у ваших опытных разработчиков, и стать частью одной большой команды.</textarea>
+          <textarea class="textarea" ref="textarea" rows="1" @keypress="resizeTextarea">Хотелось бы присоединиться к вашей команде, научится чему то большему у ваших опытных разработчиков, и стать частью одной большой команды.</textarea>
         </div>
       </div>
     </div>
@@ -18,19 +18,22 @@
 </template>
 
 <script>
-import {defineComponent, ref} from 'vue'
+import { defineComponent, onMounted } from 'vue'
 
 export default defineComponent({
   name: 'About',
-  methods: {
-    resize() {
-      setTimeout(() => {
-        let field = document.querySelector('.textarea')
-        field.style.cssText = 'height:auto; padding:0'
-        field.style.cssText = 'height:' + field.scrollHeight + 'px';
-      }, 0)
+
+  setup() {
+    function resizeTextarea() {
+      const field = document.querySelector('.textarea')
+      field.style.cssText = 'height:auto; padding:0'
+      field.style.cssText = 'height:' + field.scrollHeight + 'px';
     }
-  },
+
+    onMounted(() => {
+      resizeTextarea()
+    })
+  } ,
 })
 </script>
 
@@ -46,6 +49,10 @@ export default defineComponent({
       font-size: 30px;
       width: 100%;
       height: auto;
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     }
   }
 }

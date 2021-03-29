@@ -33,6 +33,11 @@
     align-items: flex-end;
     padding: 10px 0;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     &__label {
       white-space: nowrap;
       padding-right: 20px;
@@ -55,6 +60,14 @@
       outline: none;
       font-size: 38px;
       font-family: 'Courier New', monospace;
+
+      @media (max-width: 1024px) {
+        font-size: 28px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     }
   }
 </style>

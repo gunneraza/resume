@@ -9,10 +9,12 @@
     <js-lvl/>
     <about/>
     <future/>
-    <div class="date">
-      <div class="date__title">Дата заполнения</div>
-      <div class="input">
-        <input type="text" :value="date">
+    <div class="section">
+      <div class="date">
+        <div class="date__title">Дата заполнения</div>
+        <div class="input">
+          <input type="text" :value="date">
+        </div>
       </div>
     </div>
   </div>
@@ -78,6 +80,16 @@
       position: absolute;
       top: 160px;
       right: 0;
+
+      @media (max-width: 1200px) {
+        top: 90px;
+        width: 300px;
+      }
+
+      @media (max-width: 1024px) {
+        top: 50px;
+        width: 280px;
+      }
     }
   }
 
@@ -86,6 +98,10 @@
     align-items: flex-end;
     width: 500px;
     padding-bottom: 100px;
+
+    @media (max-width: 768px) {
+      width: 100%
+    }
 
     &__title {
       font-size: 24px;
@@ -98,6 +114,10 @@
   .title-2 {
     font-size: 30px;
     font-weight: 700;
+
+    @media (max-width: 1024px) {
+      font-size: 26px;
+    }
   }
 
   .title-1 {
@@ -106,7 +126,7 @@
   }
 
   .section {
-    padding: 100px 0;
+    padding-top: 100px;
 
     &__title {
       margin-bottom: 10px;
@@ -118,7 +138,7 @@
     }
 
     &__body {
-      margin-top: 80px;
+      margin-top: 40px;
     }
   }
 </style>

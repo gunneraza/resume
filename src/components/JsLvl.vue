@@ -56,6 +56,11 @@ export default defineComponent({
     font-size: 18px;
     cursor: pointer;
 
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+
+
     &:after {
       display: block;
       content: '';
