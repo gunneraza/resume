@@ -8,7 +8,7 @@
     <future/>
     <div class="section">
       <div class="date">
-        <div class="date__title">Дата заполнения</div>
+        <div class="date__title">Дата nadsadx</div>
         <div class="input">
           <input type="text" :value="date">
         </div>
