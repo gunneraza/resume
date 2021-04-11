@@ -4,7 +4,6 @@
       <div class="header__title" style="background-image: url('./delo.png')"></div>
       <div class="header__img" style="background-image: url('./secret.png')"></div>
     </div>
-    <js-lvl/>
     <about/>
     <future/>
     <div class="section">
