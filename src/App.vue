@@ -4,14 +4,11 @@
       <div class="header__title" style="background-image: url('./delo.png')"></div>
       <div class="header__img" style="background-image: url('./secret.png')"></div>
     </div>
-    <main-form/>
-    <skills/>
-    <js-lvl/>
     <about/>
     <future/>
     <div class="section">
       <div class="date">
-        <div class="date__title">Дата заполнения</div>
+        <div class="date__title">Дата nadsadx</div>
         <div class="input">
           <input type="text" :value="date">
         </div>
